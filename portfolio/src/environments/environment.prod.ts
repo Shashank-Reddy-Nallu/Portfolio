@@ -3,14 +3,14 @@ export const environment = {
     apiUri: "",
     s3AssetUrl: "",
     emailServiceData: {
-        templateId: parseInt(process.env["EMAIL_TEMPLATE_ID"] || "2"),
-        apiUrl: process.env["EMAIL_API_URL"] || "",
-        apiKey: process.env["EMAIL_API_KEY"] || "",
+        templateId: 2,
+        apiUrl: "https://api.brevo.com/v3/smtp/email",
+        apiKey: "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",
     },
     socialMediaUrls: {
-        linkedIn: process.env["LINKEDIN"] || "",
-        gitHub: process.env["GITHUB"] || "",
-        instagram: process.env["INSTAGRAM"] || "",
-        youtube: process.env["YOUTUBE"] || ""
+        linkedIn: 'https://www.linkedin.com/in/nallu-shashank-reddy',
+        gitHub: 'https://github.com/Shashank-Reddy-Nallu',
+        instagram: 'https://www.instagram.com/shashi._.ig',
+        youtube: 'https://www.youtube.com'
     }
 };
