@@ -6,7 +6,7 @@ const path = require('path');
 dotenv.config();
 
 // Define the path to environment.ts
-const envFilePath = path.join(__dirname, 'src/environments/environment.ts');
+const envFilePath = path.join(__dirname, 'src/environments/environment.prod.ts');
 
 // Generate environment.ts content
 const envConfig = `export const environment = {
