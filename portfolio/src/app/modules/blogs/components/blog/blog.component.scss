@@ -1,0 +1,111 @@
+.back-btn {
+    position: fixed;
+    top: 5rem;
+}
+
+.markdown-section {
+    padding-right: 1svw;
+
+    @media (min-width: 800px) {
+        padding: 0 20svw;
+    }
+}
+
+.suggested-articles-heading {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(161 161 170 / 1);
+}
+
+// All below styles are from `blogs.component.scss` file,
+// any changes applied there on blog cards should be applied here
+
+.box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 1.5rem;
+}
+
+.box-container .box {
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    background: #1a1a1a;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.box-container .box:hover .image img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.box-container .box .image {
+    height: 25rem;
+    width: 100%;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.box-container .box .content .icons {
+    position: relative;
+    top: -1rem;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    display: inline-block;
+    background: #0d0d0d;
+}
+
+.box-container .box .content .icons span {
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+
+.box-container .box .content .icons span svg {
+    color: crimson;
+}
+
+.box-container .box .content .icons span i {
+    padding-right: .5rem;
+    color: crimson;
+}
+
+.box-container .box .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+.box-container .box .content p {
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+    line-height: 2;
+
+    max-height: 10rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.blog-title {
+    line-height: 1.5;
+    height: 5rem;
+    overflow: hidden;
+}

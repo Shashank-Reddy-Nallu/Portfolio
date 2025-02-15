@@ -1,0 +1,62 @@
+[
+    {
+        "blogId": "1",
+        "title": "Efficient Angular Coding: Stay Away from These Don'ts",
+        "displayTitle": "<Efficient Angular Coding:> Stay Away from These Don'ts",
+        "queryTitle": "Angular best practices",
+        "description": "This blog provides a thorough explanation of what not to do in Angular development for creating great Angular applications.",
+        "readTime": 4,
+        "publishedOn": "2023-07-11T18:30:00.000Z",
+        "category": "Angular",
+        "likes": 10,
+        "bannerUrl": "./images/blogs/1-banner.png"
+    },
+    {
+        "blogId": "2",
+        "title": "IAM, S3, and S3 Glacier",
+        "displayTitle": "<Navigating the AWS Universe:> Exploring IAM, S3, and S3 Glacier",
+        "queryTitle": "AWS-IAM,S3,S3 glacier",
+        "description": "Explore AWS services like IAM for access control, S3 for scalable storage, and S3 Glacier for archiving.",
+        "readTime": 5,
+        "publishedOn": "2023-08-09T18:30:00.000Z",
+        "category": "AWS",
+        "likes": 1,
+        "bannerUrl": "./images/blogs/2-banner.jpg"
+    },
+    {
+        "blogId": "3",
+        "title": "Understanding Clean Architecture in C#",
+        "displayTitle": "<From Chaos to Clarity:> Unveiling the Secrets of Clean Architecture",
+        "queryTitle": "Clean Architecture in CSharp",
+        "description": "Clean Architecture in C# emphasizes separation of concerns, maintainability, testability, and scalability through layered architecture.",
+        "readTime": 7,
+        "publishedOn": "2023-10-25T18:30:00.000Z",
+        "category": "C#",
+        "likes": 9,
+        "bannerUrl": "./images/blogs/3-banner.jpg"
+    },
+    {
+        "blogId": "4",
+        "title": "Angular Version-17",
+        "displayTitle": "<Angular> Version-17",
+        "queryTitle": "Angular v17",
+        "description": "This introduces performance improvements, built-in control flow, deferrable views, and enhanced hydration for better efficiency.",
+        "readTime": 8,
+        "publishedOn": "2023-11-20T18:30:00.000Z",
+        "category": "Angular",
+        "likes": 7,
+        "bannerUrl": "./images/blogs/4-banner.png"
+    },
+    {
+        "blogId": "5",
+        "title": "Multiple layouts in Angular",
+        "displayTitle": "<Multiple> layouts in Angular",
+        "queryTitle": "Multiple layouts in angular",
+        "description": "Multiple layouts in Angular allow dynamic template switching for different views, enhancing flexibility and user experience.",
+        "readTime": 4,
+        "publishedOn": "2024-04-10T18:30:00.000Z",
+        "category": "Angular",
+        "likes": 8,
+        "bannerUrl": "./images/blogs/5-banner.png"
+    }
+]
