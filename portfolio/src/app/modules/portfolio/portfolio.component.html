@@ -3,8 +3,8 @@
 
     <!-- What I Provide section -->
     <div class="service p-0">
-        <h1 class="text-start mb-5 ms-5 section-title">What I Provide</h1>
-        <ul class="service-list">
+        <h1 class="text-start mb-5 ms-2 ms-md-5 section-title">What I Provide</h1>
+        <ul class="service-list ps-2 ps-md-5">
             @for (data of myWorkData; track data.title) {
                 <li class="service-item user-select-none">
                     <div class="service-icon-box">
@@ -26,9 +26,9 @@
 
     <!-- Testimonials section -->
     <div class="testimonials mt-5 text-white">
-        <h1 class="text-start mb-5 ms-5 section-title">Testimonials</h1>
+        <h1 class="text-start mb-5 ms-2 ms-md-5 section-title">Testimonials</h1>
 
-        <ul class="testimonials-list has-scrollbar ms-2 ms-md-0">
+        <ul class="testimonials-list has-scrollbar ms-0 ps-0 ps-md-5">
             @for (testimonial of testimonialData; track testimonial.title) {
                 <li class="testimonials-item user-select-none" (click)="toggleTestimonialModal(testimonial)">
                     <div class="content-card" data-testimonials-item>

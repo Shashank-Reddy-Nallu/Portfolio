@@ -2,7 +2,7 @@
     <h1 class="heading"> <span>My</span> Blogs </h1>
 
     @if (blogs?.length) {
-        <div class="box-container p-5">
+        <div class="box-container p-2 p-md-5">
             <!-- Blogs -->
             @for (blog of blogs; track blog.blogId) {
                 <div class="box" (click)="onBlogClick(blog)">
