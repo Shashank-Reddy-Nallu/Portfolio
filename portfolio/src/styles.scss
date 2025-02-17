@@ -1,0 +1,300 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    // font-family: 'Poppins', sans-serif;
+    font-family: "Inter", "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    //   font-weight: <weight>;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    /* text-transform: capitalize; */
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+html::-webkit-scrollbar, .main-content::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track, .main-content::-webkit-scrollbar-track {
+    background: #0d0d0d;
+}
+
+html::-webkit-scrollbar-thumb, .main-content::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 5rem;
+}
+
+body {
+    background: #0d0d0d;
+    padding-bottom: 6.5rem;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-align-justify {
+    text-align: justify;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4vw;
+    color: #fff;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.heading span {
+    text-transform: uppercase;
+    color: crimson;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: crimson;
+    padding: .7rem;
+    font-size: 1.7rem;
+    color: #fff;
+    padding-left: 2rem;
+}
+
+.btn:hover, .btn:focus-visible {
+    background: crimson;
+    color: #ffff;
+}
+
+.btn:active {
+    background: crimson !important;
+    color: #ffff !important;
+    border-color: transparent !important;
+}
+
+.btn i {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 1.7rem;
+    text-align: center;
+    background: #fff;
+    color: crimson;
+    border-radius: 50%;
+    margin-left: 1rem;
+    -webkit-transition: .2s linear;
+    transition: .2s linear;
+}
+
+.btn:hover i {
+    margin-left: 2rem;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 12vw;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+// ngx-mardown styles
+markdown {
+    width: 100%;
+
+    * {
+        line-height: 3rem;
+        font-family: "Inter", "Poppins", sans-serif !important;
+        font-optical-sizing: auto;
+        //   font-weight: <weight>;
+        font-style: normal;
+    }
+
+    // *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(button) {
+    //     font-size: 1.75rem;
+    // }
+
+    h1, h2 {
+        margin: 3rem 0;
+        font-weight: 800;
+    }
+
+    h3, h4, h5, h6 {
+        margin: 3rem 0 1rem 0;
+        font-weight: 600;
+    }
+
+    h1 {
+        // font-size: calc(1.375rem + 1.5vw);
+
+        // @media (min-width: 1200px) {
+            font-size: 3em;
+        // }
+    }
+
+    h2 {
+        // font-size: calc(1.325rem + .9vw);
+
+        // @media (min-width: 1200px) {
+            font-size: 2em;
+        // }
+    }
+
+    h3 {
+        // font-size: calc(1.3rem + .6vw);
+
+        // @media (min-width: 1200px) {
+            font-size: 2em;
+        // }
+    }
+
+    pre[class*=language-] {
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 768px) {
+            padding: 2em 1em 1em 1em;
+        }
+    }
+
+    pre::-webkit-scrollbar {
+        width: 0.5rem;
+        height: 3px;
+    }
+    
+    pre::-webkit-scrollbar-track, .main-content::-webkit-scrollbar-track {
+        background: #0d0d0d;
+    }
+    
+    pre::-webkit-scrollbar-thumb, .main-content::-webkit-scrollbar-thumb {
+        background: crimson;
+        border-radius: 5rem;
+    }
+    
+    p {
+        font-size: 1.75rem;
+        text-align: justify;
+    }
+
+    blockquote {
+        color: rgb(255 255 255 / 66%);
+        padding-left: 1.5em;
+        border-left: 3px solid rgb(255 255 255 / 66%);
+        margin: 2rem 0;
+
+        // background: #202024;
+        // width: fit-content;
+        // padding: 0 1em 0 1em;
+        // border-top-right-radius: 4px;
+        // border-radius: 0 4px 4px 0;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+    }
+    
+    table, th, td {
+        border: 1px solid;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+
+    li::marker {
+        font-size: 1.75rem;
+    }
+    
+    markdown-clipboard button {
+        // color: white;
+        // background: none;
+        font-size: 1.25rem;
+
+        --tw-border-opacity: 1;
+        --tw-bg-opacity: 1;
+        --tw-text-opacity: 1;
+        align-items: center;
+        background-color: rgb(253 237 234 / var(--tw-bg-opacity));
+        border-color: rgb(245 147 128 / var(--tw-border-opacity));
+        border-radius: .5rem;
+        border-width: 2px;
+        color: rgb(238 75 43 / var(--tw-text-opacity));
+        display: flex;
+        justify-content: center;
+        margin-left: .5rem;
+        padding: .125rem .75rem;
+
+        background-color: #ee4c2b39;
+        border-color: #ee4c2b88;
+    }
+
+    a {
+        color: crimson;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        margin: 1rem 0;
+    }
+
+    // Code block styles
+    // For Variables
+    // .token.constant, .token.symbol {
+    //     color: #ff9800;
+    //     // font-weight: bold;
+    // }
+
+    // // For Enum names
+    // .token.class-name {
+    //     color: #4caf50;
+    //     font-style: italic;
+    // }
+
+    // // For Keywords (export, enum, etc.)
+    // .token.keyword {
+    //     color: #d32f2f;
+    //     // font-weight: bold;
+    // }
+}

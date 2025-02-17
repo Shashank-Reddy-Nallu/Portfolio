@@ -1,0 +1,13 @@
+<div class="main-layout">
+    <div class="body main-content" id="main-content" #mainContent>
+        <ng-content />
+    </div>
+
+    <nav class="navbar p-0 user-select-none" id="nav-bar" #navBar>
+        <a routerLink="/home"> <i class="fas fa-home"></i> <span>Home</span> </a>
+        <a routerLink="/about"> <i class="fas fa-user"></i> <span>About</span> </a>
+        <a routerLink="/portfolio"> <i class="fas fa-briefcase"></i> <span>Portfolio</span> </a>
+        <a routerLink="/blogs"> <i class="fas fa-blog"></i> <span>Blogs</span> </a>
+        <a routerLink="/contact"> <i class="fas fa-address-book"></i> <span>Contact</span> </a>
+    </nav>
+</div>

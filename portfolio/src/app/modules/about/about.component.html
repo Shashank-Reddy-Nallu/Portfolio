@@ -1,0 +1,171 @@
+<!-- about section starts  -->
+<section class="about">
+    <h1 class="heading"> About <span>Me</span> </h1>
+    <div class="row">
+        <div class="info-container">
+            <h1>Personal Info</h1>
+            <div class="box-container">
+                <div class="box">
+                    <h3> <span>Name : </span> {{personalDetails.name}} </h3>
+                    <h3> <span>Age : </span> {{personalDetails.age}} </h3>
+                    <h3> <span>Email : </span> <a class="text-white" title="Click to send mail" [href]="'mailto:' + personalDetails.email">{{personalDetails.email}}</a> </h3>
+                    <h3> <span>Address : </span> {{personalDetails.address}} </h3>
+                </div>
+
+                <div class="box">
+                    <h3> <span>Freelance : </span> Available </h3>
+                    <h3> <span>Role : </span> Full Stack Developer</h3>
+                    <h3> <span>Experience : </span> {{personalDetails.experience}}+ Years </h3>
+                    <h3> <span>Languages : </span> English, Hindi, Telugu </h3>
+                </div>
+            </div>
+            <a (click)="downloadCV()" class="btn"> Download CV <i class="fas fa-download"></i> </a>
+        </div>
+
+        <div class="count-container">
+            <div class="box user-select-none">
+                <h3>{{personalDetails.experience}}+</h3>
+                <p>Years of Experience</p>
+            </div>
+
+            <div class="box cursor-pointer user-select-none" routerLink="/blogs">
+                <h3>{{blogsCount}}+</h3>
+                <p>Blogs</p>
+            </div>
+
+            <div class="box user-select-none">
+                <h3>20+</h3>
+                <p>Projects Completed</p>
+            </div>
+
+            <div class="box user-select-none">
+                <h3>30+</h3>
+                <p>Certifications</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts  -->
+<section class="skills">
+    <h1 class="heading"> <span>My</span> Skills </h1>
+    <div class="box-container">
+        @for (skill of skills; track $index) {
+            <div class="box cursor-pointer">
+                <img [src]="'./images/skills/'+skill.image.toLowerCase()+'.png'">
+                <h3>{{skill.name}}</h3>
+            </div>
+        }
+        @empty {
+            <h4 class="text-white text-center">Hey! I don't have any skills</h4>
+        }
+    </div>
+</section>
+<!-- skills section ends -->
+
+<!-- story section starts -->
+<section class="story-section">
+    <h1 class="heading">My <span>Story</span></h1>
+    <div class="story">
+        <div class="d-flex align-items-center gap-2">
+            <span class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 50 50">
+                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="#4974bc" d="M6.25 12.5v25L25 25z" />
+                        <path stroke="crimson" d="M43.75 25L25 37.5v-25z" />
+                    </g>
+                </svg>
+            </span>
+            <h1>Coding</h1>
+        </div>
+        <p>
+            With a strong curiosity and a constant desire to learn, I enjoy working in the fast-changing tech industry. The dynamic nature of this field excites me, and I welcome the challenge of keeping up. Whether it's learning new programming languages or exploring innovative frameworks, I am dedicated to improving my skills and pushing limits.
+        </p>
+    </div>
+    <div class="story mt-5">
+        <div class="d-flex align-items-center gap-2">
+            <span class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 50 50">
+                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="#4974bc" d="M6.25 12.5v25L25 25z" />
+                        <path stroke="crimson" d="M43.75 25L25 37.5v-25z" />
+                    </g>
+                </svg>
+            </span>
+            <h1>Cricket</h1>
+        </div>
+        <p>
+            Beyond coding, I channel my competitive spirit on the cricket field. For me, cricket is more than just a sport; it's a medium to connect with others, forge lasting friendships, and maintain balance in life.
+        </p>
+    </div>
+    <div class="story mt-5">
+        <div class="d-flex align-items-center gap-2">
+            <span class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 50 50">
+                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="#4974bc" d="M6.25 12.5v25L25 25z" />
+                        <path stroke="crimson" d="M43.75 25L25 37.5v-25z" />
+                    </g>
+                </svg>
+            </span>
+            <h1>Gaming</h1>
+        </div>
+        <p>
+            In my downtime, I enjoy playing mobile games! Engaging in these games offers a fun escape and a chance to challenge my strategic thinking.
+        </p>
+    </div>
+    <div class="story mt-5">
+        <div class="d-flex align-items-center gap-2">
+            <span class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 50 50">
+                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="#4974bc" d="M6.25 12.5v25L25 25z" />
+                        <path stroke="crimson" d="M43.75 25L25 37.5v-25z" />
+                    </g>
+                </svg>
+            </span>
+            <h1>Journey Ahead</h1>
+        </div>
+        <p>
+            I am excited about this path of self-discovery and professional growth. Join me as I continue to learn, create, and make a positive impact in the world of development.
+        </p>
+    </div>
+</section>
+<!-- story section ends -->
+
+<!-- education section starts -->
+<section class="education">
+    <h1 class="heading"> <span>My</span> Education </h1>
+    <div class="education-box d-flex-justify-content-center ps-3">
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2019 - 2023</span>
+                <h3>Bachelor of Technology - B.Tech</h3>
+                <p>
+                    Completed graduation in Information Technology from <span>JB Institute of Engineering and Technology.</span>
+                </p>
+            </div>
+    
+            <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2017 - 2019</span>
+                <h3>Senior Secondary - Intermediate</h3>
+                <p>
+                    Completed senior secondary from <span>Narayana Junior College.</span>
+                </p>
+            </div>
+    
+            <!-- <div class="box">
+                <i class="fas fa-graduation-cap"></i>
+                <span>2016 - 2017</span>
+                <h3>Secondary - SSC</h3>
+                <p>
+                    Completed secondary from <span>New Millennium High School.</span>
+                </p>
+            </div> -->
+        </div>
+    </div>
+</section>
+<!-- education section ends -->

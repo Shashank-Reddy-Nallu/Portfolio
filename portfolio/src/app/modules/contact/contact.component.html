@@ -1,0 +1,76 @@
+<section class="contact">
+    <h1 class="heading"> Contact <span>Me</span> </h1>
+
+    <div class="row">
+        <div class="info-container">
+            <h1>Get In Touch</h1>
+            <p class="text-align-justify">
+                Thank you for visiting my portfolio! Whether you have any questions about my work, need an experienced developer for your project, or looking for a freelancer to collaborate with, I'd love to hear from you. Feel free to submit the contact form or connect with me through my social media profiles.
+            </p>
+            <p class="mt-2 text-align-justify">
+                I will do my best to get back to you soon!
+            </p>
+
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-map"></i>
+                    <div class="info">
+                        <h3>Address :</h3>
+                        <p>Hyderabad, India - 500018</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-envelope"></i>
+                    <div class="info">
+                        <h3>Email :</h3>
+                        <p>
+                            <a title="Click to send mail"
+                            [href]="'mailto:'+ email">{{email}}</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fas fa-phone" style="transform: rotate(90deg);"></i>
+                    <div class="info">
+                        <h3>Phone :</h3>
+                        <p>+91 9059605249</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="share">
+                <a [href]="socialMediaUrls.linkedIn" target="_blank" class="fab fa-linkedin" title="LinkedIn"></a>
+                <a [href]="socialMediaUrls.gitHub" target="_blank" class="fab fa-github" title="GitHub"></a>
+                <a [href]="socialMediaUrls.instagram" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+                <a [href]="socialMediaUrls.youtube" target="_blank" class="fab fa-youtube" title="YouTube"></a>
+            </div>
+        </div>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" autoFocusInvalidInput>
+            <div class="inputBox">
+                <input type="text" formControlName="name" [ngClass]="{'invalid': (contactForm.get('name')?.touched || contactForm.get('name')?.dirty) && contactForm.get('name')?.errors}" placeholder="Enter your name *" />
+
+                <input type="email" formControlName="email" [ngClass]="{'invalid': (contactForm.get('email')?.touched || contactForm.get('email')?.dirty) && contactForm.get('email')?.errors}" placeholder="Enter your email *" />
+            </div>
+        
+            <div class="inputBox">
+                <input type="text" formControlName="country" [ngClass]="{'invalid': (contactForm.get('country')?.touched || contactForm.get('country')?.dirty) && contactForm.get('country')?.errors}" placeholder="Enter your country / country code" />
+
+                <input type="text" formControlName="phone" [ngClass]="{'invalid': (contactForm.get('phone')?.touched || contactForm.get('phone')?.dirty) && contactForm.get('phone')?.errors}" placeholder="Enter your phone number" />
+            </div>
+        
+            <textarea formControlName="message" [ngClass]="{'invalid': (contactForm.get('message')?.touched || contactForm.get('message')?.dirty) && contactForm.get('message')?.errors}" placeholder="Enter your message *" cols="30" rows="10"></textarea>
+            
+            @if(isEmailSent) {
+                <p class="mt-2 p-3" [ngClass]="isSuccess ? 'success-message' : 'error-message'">
+                    {{isSuccess ? 'Your message has been successfully sent!' : 'Something went wrong... Please try again!'}}
+                </p>
+            }
+
+            <input type="submit" class="btn submit-btn" [disabled]="contactForm.invalid || isSubmitBtnDisabled" value="Send Message">
+        
+        </form>
+    </div>
+</section>

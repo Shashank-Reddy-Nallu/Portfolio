@@ -1,0 +1,82 @@
+<section class="portfolio">
+    <h1 class="heading"> <span>My</span> Work </h1>
+
+    <!-- What I Provide section -->
+    <div class="service p-0">
+        <h1 class="text-start mb-5 ms-2 ms-md-5 section-title">What I Provide</h1>
+        <ul class="service-list ps-2 ps-md-5">
+            @for (data of myWorkData; track data.title) {
+                <li class="service-item user-select-none">
+                    <div class="service-icon-box">
+                        <img [src]="data.imageUrl" [alt]="data.altText" width="40">
+                    </div>
+      
+                    <div class="service-content-box">
+                        <h4 class="h4 service-item-title">{{data.title}}</h4>
+                        <p class="service-item-text">
+                            {{data.description}}
+                        </p>
+                    </div>
+      
+                </li>
+            }
+        </ul>
+        <button (click)="onContactClick()" class="mt-5 btn" type="button">Contact Me <i class="fas fa-arrow-right"></i></button>
+    </div>
+
+    <!-- Testimonials section -->
+    <div class="testimonials mt-5 text-white">
+        <h1 class="text-start mb-5 ms-2 ms-md-5 section-title">Testimonials</h1>
+
+        <ul class="testimonials-list has-scrollbar ms-0 ps-0 ps-md-5">
+            @for (testimonial of testimonialData; track testimonial.title) {
+                <li class="testimonials-item user-select-none" (click)="toggleTestimonialModal(testimonial)">
+                    <div class="content-card" data-testimonials-item>
+                        <figure class="testimonials-avatar-box">
+                            <img [src]="testimonial.imageUrl" [alt]="testimonial.altText" width="60" data-testimonials-avatar>
+                        </figure>
+                        <h3 class="testimonials-item-title text-start" data-testimonials-title>{{testimonial.title}}</h3>
+                        <div class="testimonials-text text-start mt-4" data-testimonials-text>
+                            <p>
+                                {{testimonial.description}}
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+
+    <!-- Testimonial Modal -->
+    @if (isModalOpen) {
+        <div class="modal-container active" data-modal-container>
+            <div class="overlay active" data-overlay></div>
+
+            <div class="testimonials-modal" appClickOutside (clickOutside)="toggleTestimonialModal()">
+                <button class="modal-close-btn" data-modal-close-btn (click)="toggleTestimonialModal()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
+                        <path fill="crimson" d="m12 10.587l4.95-4.95l1.414 1.414l-4.95 4.95l4.95 4.95l-1.415 1.414l-4.95-4.95l-4.949 4.95l-1.414-1.415l4.95-4.95l-4.95-4.95L7.05 5.638z" />
+                    </svg>
+                </button>
+
+                <div class="modal-img-wrapper gap-5 user-select-none">
+                    <figure class="modal-avatar-box">
+                        <img [src]="activeTestimonialData?.imageUrl" [alt]="activeTestimonialData?.altText" width="80" data-modal-img>
+                    </figure>
+
+                    <img src="./images/work/icon-quote.svg" alt="quote icon">
+                </div>
+
+                <div class="modal-content text-start">
+                    <h4 class="h3 modal-title text-white" data-modal-title>{{activeTestimonialData?.title}}</h4>
+                    <time datetime="2021-06-14">{{activeTestimonialData?.date}}</time>
+                    <div data-modal-text>
+                        <p>
+                            {{activeTestimonialData?.description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>

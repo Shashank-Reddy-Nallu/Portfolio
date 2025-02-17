@@ -1,0 +1,196 @@
+.home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 4rem;
+    min-height: calc(100vh - 7rem);
+    min-height: calc(100svh - 7rem);
+}
+
+.home .image {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+    text-align: center;
+}
+
+.home .image img {
+    // height: 55rem;
+    // width: 50rem;
+    height: 55rem;
+    width: 45rem;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.home .content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 42rem;
+    flex: 1 1 42rem;
+}
+
+.home .content h3 {
+    color: #fff;
+    font-size: 4rem;
+    padding-bottom: .5rem;
+}
+
+.home .content span {
+    font-size: 3rem;
+    color: crimson;
+    padding: .5rem 0;
+    display: block;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .home {
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .home .image img {
+        // height: 30rem;
+        // width: 30rem;
+        height: 47rem;
+        width: 38rem;
+    }
+
+    .home .content h3 {
+        font-size: 3rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+}
+
+// Intoduction section (Name, designation)
+.my-intro {
+    animation: lights 5s 750ms linear infinite;
+}
+
+@keyframes lights {
+    0% {
+        color: hsl(230, 40%, 80%);
+    //   text-shadow:
+    //     0 0 1em hsla(320, 100%, 50%, 0.2),
+    //     0 0 0.125em hsla(320, 100%, 60%, 0.3),
+    //     -1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+    //     1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+
+    30% { 
+        color: hsl(230, 80%, 90%);
+        text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 60%, 0.5),
+        -0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+        0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    40% { 
+        color: hsl(230, 100%, 95%);
+        text-shadow:
+        0 0 1em hsla(320, 100%, 50%, 0.5),
+        0 0 0.125em hsla(320, 100%, 90%, 0.5),
+        -0.25em -0.125em 0.125em hsla(40, 100%, 60%, 0.2),
+        0.25em 0.125em 0.125em hsla(200, 100%, 60%, 0.4);
+    }
+
+    70% {
+        color: hsl(230, 80%, 90%);
+    //   text-shadow:
+    //     0 0 1em hsla(320, 100%, 50%, 0.5),
+    //     0 0 0.125em hsla(320, 100%, 60%, 0.5),
+    //     0.5em -0.125em 0.25em hsla(40, 100%, 60%, 0.2),
+    //     -0.5em 0.125em 0.25em hsla(200, 100%, 60%, 0.4);
+    }
+
+    100% {
+        color: hsl(230, 40%, 80%);
+    //   text-shadow:
+    //     0 0 1em hsla(320, 100%, 50%, 0.2),
+    //     0 0 0.125em hsla(320, 100%, 60%, 0.3),
+    //     1em -0.125em 0.5em hsla(40, 100%, 60%, 0),
+    //     -1em 0.125em 0.5em hsla(200, 100%, 60%, 0);
+    }
+}
+
+/* Typewriter effect */
+@keyframes typing {
+    0% { content: "S"; }
+    3% { content: "So"; }
+    6% { content: "Sof"; }
+    9% { content: "Soft"; }
+    12% { content: "Softw"; }
+    15% { content: "Softwa"; }
+    18% { content: "Softwar"; }
+    21% { content: "Software"; }
+    24% { content: "Software D"; }
+    27% { content: "Software De"; }
+    30% { content: "Software Dev"; }
+    33% { content: "Software Deve"; }
+    36% { content: "Software Devel"; }
+    39% { content: "Software Develo"; }
+    42% { content: "Software Develop"; }
+    45% { content: "Software Develope"; }
+    48% { content: "Software Developer"; }
+    51% { content: "Software Develope"; }
+    54% { content: "Software Develop"; }
+    57% { content: "Software Develo"; }
+    60% { content: "Software Devel"; }
+    63% { content: "Software Deve"; }
+    66% { content: "Software Dev"; }
+    69% { content: "Software De"; }
+    72% { content: "Software D"; }
+    75% { content: "Software"; }
+    78% { content: "Softwar"; }
+    81% { content: "Softwa"; }
+    84% { content: "Softw"; }
+    87% { content: "Soft"; }
+    90% { content: "Sof"; }
+    93% { content: "So"; }
+    96% { content: "S"; }
+    99% { content: ""; }
+    100% { content: ""; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.typewriter {
+    --caret: currentcolor;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 10s steps(20, end) infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 1s linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .typewriter::before {
+        content: "Software Developer";
+    }
+    .typewriter::after {
+        animation: none;
+    }
+}
