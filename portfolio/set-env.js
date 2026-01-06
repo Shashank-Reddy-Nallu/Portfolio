@@ -13,6 +13,7 @@ const envConfig = `export const environment = {
     production: true,
     apiUri: "",
     s3AssetUrl: "",
+    resumeUrl: ${process.env.RESUME_URL || 'DEFAULT_API_URL'},
     emailServiceData: {
         templateId: ${parseInt(process.env.EMAIL_TEMPLATE_ID || '1')},
         apiUrl: '${process.env.EMAIL_API_URL || 'DEFAULT_API_URL'}',
