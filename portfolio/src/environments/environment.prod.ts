@@ -2,6 +2,7 @@ export const environment = {
     production: true,
     apiUri: "",
     s3AssetUrl: "",
+    resumeUrl: "DEFAULT_URL",
     emailServiceData: {
         templateId: 1,
         apiUrl: 'DEFAULT_API_URL',
