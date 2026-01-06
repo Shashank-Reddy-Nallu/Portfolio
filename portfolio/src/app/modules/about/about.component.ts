@@ -118,8 +118,8 @@ export class AboutComponent {
 
   downloadCV(): void {
     const link = document.createElement('a');
-    link.href = "./pdf/resume.pdf";
-    link.download = "Shashank_Resume_2025.pdf";
+    link.href = "./pdf/temporary-restriction-on-resume-access.pdf";
+    link.download = "Shashank_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
