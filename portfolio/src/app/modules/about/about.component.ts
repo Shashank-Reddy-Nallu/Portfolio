@@ -27,7 +27,6 @@ export class AboutComponent {
   skills!: ISkillSet[];
   personalDetails!: IDetails;
   resumeUrl: string = environment.resumeUrl;
-  // https://drive.google.com/uc?export=download&id=1zPH9LXE00tajRDHqW3cMe4CHlvI7U5FD
   blogsCount: number = 5;
 
   constructor(private readonly blogService: BlogService, private readonly seoService: SeoService) {
