@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BlogService } from '../../shared/services/blog.service';
 import { SeoService } from '../../shared/services/seo.service';
-import { environment } from '../../../environments/environment';
 
 interface ISkillSet {
   name: string;
@@ -26,7 +25,6 @@ interface IDetails {
 export class AboutComponent {
   skills!: ISkillSet[];
   personalDetails!: IDetails;
-  resumeUrl: string = environment.resumeUrl;
   blogsCount: number = 5;
 
   constructor(private readonly blogService: BlogService, private readonly seoService: SeoService) {
@@ -119,16 +117,12 @@ export class AboutComponent {
   }
 
   downloadCV(): void {
-    const url = this.resumeUrl?.trim();
-
-    if (url) {
-      const link = document.createElement('a');
-      link.href = url;
-      // may be ignored for cross-origin
-      link.download = "Shashank_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+    const link = document.createElement('a');
+    link.href = "./pdf/temporary-restriction-on-resume-access.pdf";
+    // may be ignored for cross-origin
+    link.download = "Shashank_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 }
