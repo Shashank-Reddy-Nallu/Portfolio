@@ -7,7 +7,29 @@
     padding-right: 1svw;
 
     @media (min-width: 800px) {
-        padding: 0 20svw;
+        padding: 0 15svw;
+    }
+}
+
+.markdown-section-sticky {
+    padding-right: 1svw;
+
+    @media (min-width: 800px) {
+        padding: 0 0 0 10svw;
+        gap: 5svw;
+    }
+}
+
+.blog-section-titles-sticky {
+    position: sticky;
+    margin-top: 5svh;
+    top: 2rem;
+    z-index: 2;
+}
+
+@media (max-width: 1199px) {
+    .blog-section-titles-sticky {
+        display: none !important;
     }
 }
 

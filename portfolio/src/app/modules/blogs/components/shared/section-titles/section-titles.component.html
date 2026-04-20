@@ -1,0 +1,14 @@
+<aside class="section-titles-wrapper">
+    <p class="section-title-heading mb-3">On this page</p>
+
+    @for (sectionTitle of sectionTitles; track sectionTitle.domId) {
+        <button
+            type="button"
+            class="section-title-btn"
+            [ngClass]="{ 'active': activeDomId === sectionTitle.domId }"
+            (click)="onSectionTitleClick(sectionTitle)"
+        >
+            {{ sectionTitle.label }}
+        </button>
+    }
+</aside>

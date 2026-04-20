@@ -9,6 +9,7 @@
         "publishedOn": "2023-07-11T18:30:00.000Z",
         "category": "Angular",
         "likes": 10,
+        "thumbnailUrl": "./images/blogs/1-banner.png",
         "bannerUrl": "./images/blogs/1-banner.png"
     },
     {
@@ -21,6 +22,7 @@
         "publishedOn": "2023-08-09T18:30:00.000Z",
         "category": "AWS",
         "likes": 1,
+        "thumbnailUrl": "./images/blogs/2-banner.jpg",
         "bannerUrl": "./images/blogs/2-banner.jpg"
     },
     {
@@ -33,6 +35,7 @@
         "publishedOn": "2023-10-25T18:30:00.000Z",
         "category": "C#",
         "likes": 9,
+        "thumbnailUrl": "./images/blogs/3-banner.jpg",
         "bannerUrl": "./images/blogs/3-banner.jpg"
     },
     {
@@ -45,6 +48,7 @@
         "publishedOn": "2023-11-20T18:30:00.000Z",
         "category": "Angular",
         "likes": 7,
+        "thumbnailUrl": "./images/blogs/4-banner.png",
         "bannerUrl": "./images/blogs/4-banner.png"
     },
     {
@@ -57,6 +61,54 @@
         "publishedOn": "2024-04-10T18:30:00.000Z",
         "category": "Angular",
         "likes": 8,
+        "thumbnailUrl": "./images/blogs/5-banner.png",
         "bannerUrl": "./images/blogs/5-banner.png"
+    },
+    {
+        "blogId": "6",
+        "title": "Cursor — The Best Friend Every Developer Needs",
+        "displayTitle": "<Cursor> — The Best Friend Every Developer Needs",
+        "queryTitle": "Cursor — The Best Friend Every Developer Needs",
+        "description": "Cursor — The Best Friend Every Developer Needs",
+        "readTime": 11,
+        "publishedOn": "2026-04-14T18:30:00.000Z",
+        "category": "AI",
+        "likes": 12,
+        "sectionTitles": [
+            {
+                "label": "What Is Cursor?",
+                "domId": "what-is-cursor"
+            },
+            {
+                "label": "Quick Setup Guide",
+                "domId": "quick-setup-guide"
+            },
+            {
+                "label": "How it works?",
+                "domId": "how-it-works"
+            },
+            {
+                "label": "Smart Autocomplete",
+                "domId": "smart-autocomplete"
+            },
+            {
+                "label": "Core Features & Development Workflow",
+                "domId": "core-features-development-workflow"
+            },
+            {
+                "label": "Tips & Tricks",
+                "domId": "tips-tricks"
+            },
+            {
+                "label": "Is Cursor Worth It?",
+                "domId": "is-cursor-worth-it"
+            },
+            {
+                "label": "Final Thoughts",
+                "domId": "final-thoughts"
+            }
+        ],
+        "thumbnailUrl": "./images/blogs/6-thumbnail.png",
+        "bannerUrl": "./images/blogs/6-banner.png"
     }
 ]

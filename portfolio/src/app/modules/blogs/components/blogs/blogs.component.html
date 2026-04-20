@@ -7,7 +7,7 @@
             @for (blog of blogs; track blog.blogId) {
                 <div class="box" (click)="onBlogClick(blog)">
                     <div class="image user-select-none">
-                        <img [src]="blog.bannerUrl" alt="Banner image">
+                        <img [src]="blog.thumbnailUrl" alt="Banner image">
                     </div>
                     <div class="content">
                         <div class="icons user-select-none">

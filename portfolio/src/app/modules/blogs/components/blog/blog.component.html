@@ -8,14 +8,19 @@
         </a>
     
         <blog-header [blogHeader]="currentBlogHeader"/>
-         <div class="markdown-section d-flex align-items-center justify-content-center">            
-             <markdown emoji katex mermaid clipboard [src]="'./blogs/' + currentBlog.blogId + '.md'" ngPreserveWhitespaces></markdown>
+        <div class="d-flex align-items-center justify-content-center" [ngClass]="currentBlog.sectionTitles?.length ? 'markdown-section-sticky' : 'markdown-section'">            
+            <markdown emoji katex mermaid clipboard [src]="'./blogs/' + currentBlog.blogId + '.md'" ngPreserveWhitespaces (ready)="onMarkdownReady()" />
              <!-- <markdown emoji katex mermaid clipboard ngPreserveWhitespaces [data]="markdownContent"></markdown> -->
     
              <!-- <markdown emoji katex mermaid clipboard src="./d/d2.md" ngPreserveWhitespaces></markdown> -->
     
             <!-- <markdown [data]="markdownContent" emoji></markdown> -->
-         </div>
+        @if (currentBlog.sectionTitles?.length) {
+            <section class="d-flex align-self-start p-0 blog-section-titles-sticky">
+                <app-section-titles [sectionTitles]="currentBlog.sectionTitles ?? []" />
+            </section>
+        }
+        </div>
 
          <!-- Scroll to top btn -->
          <div class="d-flex justify-content-center align-items-center mt-5">
